@@ -30,10 +30,7 @@ app.set('view engine','ejs');
 app.set("port", process.env.PORT)
 
 app.get("/books",homecontroller.index)
-app.listen(port, () => {
-    console.log(`Local Host 3000`);
-  
-});
+
 app.use(
   methodOverride("_method", {
     methods: ["POST", "GET",]

@@ -47,7 +47,9 @@ app.post("/books/create", homecontroller.create, homecontroller.redirectView);
 app.get("/books/:id", homecontroller.show, homecontroller.showView);
 app.delete("/books/:id/delete", homecontroller.delete, homecontroller.redirectView);
 
- 
+app.listen(app.get("port"), () => {
+  console.log(`Server running @ http://localhost:${app.get("port")}`);
+});
 /* modelVar.create(
   {
     ID: "book1",
